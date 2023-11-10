@@ -1,0 +1,47 @@
+<div style="margin-left: 1em;">
+    <!-- Transaction form with Angular Material components -->
+    <form [formGroup]="transactionForm" novalidate (ngSubmit)="onSubmit()">
+        <!-- Card header with the title -->
+        <mat-card-header>
+            <mat-card-title>Transaction</mat-card-title>
+        </mat-card-header>
+        <!-- Card content section -->
+        <mat-card-content>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Select Type of Transaction</mat-label>
+                        <!-- Dropdown for transaction type -->
+                        <mat-select formControlName="type">
+                            <mat-option value="Deposit">Deposit</mat-option>
+                            <mat-option value="Withdrawal">Withdraw</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Select the Amount</mat-label>
+                        <!-- Dropdown for transaction amount -->
+                        <mat-select formControlName="money">
+                            <mat-option value="5">{{5 | currency:'EUR'}}</mat-option>
+                            <mat-option value="10">{{10 | currency:'EUR'}}</mat-option>
+                            <mat-option value="20">{{20 | currency:'EUR'}}</mat-option>
+                            <mat-option value="50">{{50 | currency:'EUR'}}</mat-option>
+                            <mat-option value="100">{{100 | currency:'EUR'}}</mat-option>
+                            <mat-option value="200">{{200 | currency:'EUR'}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <!-- Card actions section -->
+        <mat-card-actions>
+            <!-- Button to submit the form -->
+            <button mat-raised-button color="primary" type="submit">Complete Transaction</button>
+        </mat-card-actions>
+    </form>
+
+    <!-- Custom back button component -->
+    <app-back-button></app-back-button>
+</div>

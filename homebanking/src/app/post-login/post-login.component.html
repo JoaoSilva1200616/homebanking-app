@@ -1,0 +1,53 @@
+<!-- Responsive layout for small screens (1 column) -->
+<mat-grid-list cols="1" rowHeight="5:1" *ngIf="isSmallScreen">
+    <mat-grid-tile>
+        <p>Hello, <strong>{{ user?.firstName }} {{ user?.lastName }}</strong> </p>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <p><strong>Account Balance:</strong> {{ user?.accountBalanceInEuros | currency:'EUR' }}</p>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <p><strong>Account Number:</strong> {{ user?.accountNumber }}</p>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <!-- Button to navigate to the list of movements -->
+        <button mat-raised-button style="width: 100%; height: 100%;" routerLink="/movements">List of Movements</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <!-- Button to navigate to the transactions page -->
+        <button mat-raised-button style="width: 100%; height: 100%;" routerLink="/transactions">Deposit /
+            Withdraw</button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<!-- Responsive layout for medium to large screens (3 columns) -->
+<mat-grid-list cols="3" rowHeight="2:1" *ngIf="!isSmallScreen">
+    <mat-grid-tile>
+        <p>Hello, <strong>{{ user?.firstName }} {{ user?.lastName }}</strong> </p>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+        <p><strong>Account Balance:</strong> {{ user?.accountBalanceInEuros | currency:'EUR' }}</p>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="1" rowHeight="8:1" *ngIf="!isSmallScreen">
+    <mat-grid-tile>
+        <p><strong>Account Number:</strong> {{ user?.accountNumber }}</p>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="2" rowHeight="5:1" *ngIf="!isSmallScreen">
+    <mat-grid-tile style="cursor: pointer;">
+        <!-- Button to navigate to the list of movements -->
+        <button mat-raised-button style="width: 100%; height: 100%;" routerLink="/movements">List of Movements</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <!-- Button to navigate to the transactions page -->
+        <button mat-raised-button style="width: 100%; height: 100%;" routerLink="/transactions">Deposit /
+            Withdraw</button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<!-- Logout button -->
+<button class="logout" routerLink="/" (click)="logOut()">Log Out</button>

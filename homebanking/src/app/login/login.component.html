@@ -1,0 +1,45 @@
+<!-- Login form using Angular Material components -->
+<form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="login-card">
+        <!-- Card header with title -->
+        <mat-card-header>
+            <mat-card-title>Login Information</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+                <!-- Input field for Email -->
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Email" formControlName="email">
+
+                        <!-- Error messages for email validation -->
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+                            Please enter a valid email address
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!-- Input field for Password -->
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Password" formControlName="password" type="password">
+
+                        <!-- Error message for password validation -->
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <!-- Card actions with the Login button -->
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

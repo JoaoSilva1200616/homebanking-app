@@ -1,0 +1,40 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.login-button-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.login-button-container a {
+  transition: background-color 0.3s ease-in-out; /* Add a transition for background-color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-button-container a:hover {
+  background-color: #3e274c; /* Background color on hover */
+}
+
