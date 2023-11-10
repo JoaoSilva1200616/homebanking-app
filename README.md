@@ -62,8 +62,9 @@ The Homebanking Application follows a simple and secure flow to provide users wi
 - Click on the logout button.
 - The user is logged out, and access to user-related components is restricted.
 
-#### Note:**AuthGuard:** User-related components are guarded by the AuthGuard to prevent unauthorized access.
+#### Note:
 
+* **AuthGuard:** User-related components are guarded by the AuthGuard to prevent unauthorized access.
 * **Security:** The application prioritizes security by requiring login credentials for access.
 * **Feedback:** Users receive feedback on successful transactions.
 
@@ -110,6 +111,21 @@ User used for testing:
 Email: teste1@gmail.com
 Password: teste123
 ```
+
+# Potential Future Improvements:
+
+1. **Account-to-Account Transfers:**
+
+   * Implementing the ability to transfer funds between accounts will offer users greater flexibility and control over their finances.
+2. **Account Settings:**
+
+   * Developing an account settings page will give users the ability to manage their personal information, passwords, and notification preferences in an intuitive manner.
+3. **Expense Analysis:**
+
+   * Adding a dedicated route for expense analysis, with detailed charts and reports, will enable users to better understand their spending patterns.
+4. **Two-Factor Authentication (2FA):**
+
+   * Strengthening security by implementing two-factor authentication will provide an additional layer of protection for user accounts.
 
 # Conclusion
 
