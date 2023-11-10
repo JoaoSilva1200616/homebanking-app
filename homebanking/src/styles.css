@@ -6,7 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .background{
     background: linear-gradient(rgba(0, 0, 0, 0.3), 
     rgba(0, 0, 0, 0.9)),
-    url(../../assets/bank.png);
+    url(../src/assets/bank.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: static;
