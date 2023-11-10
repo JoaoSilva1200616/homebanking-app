@@ -11,7 +11,7 @@ The Homebanking Application is designed to provide users with a convenient and s
 
 ### Application Flow
 
-The Homebanking Application follows a simple and secure flow to provide users with efficient financial management. Here's a step-by-step guide:
+The Homebanking Application follows a simple and secure flow to provide users with efficient financial management. You can watch the application demo but here's a step-by-step guide:
 
 #### 1. Front Page
 
